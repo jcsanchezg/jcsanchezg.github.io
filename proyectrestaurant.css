@@ -1,0 +1,35 @@
+.wrapper {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+.box {
+    border: 1px solid blue;
+    border-radius:16px;
+    background-color: lightblue;
+    display:flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+}
+.top {
+    grid-column: 1/4;
+    grid-row: 1;
+}
+.picturefood {
+    grid-column: 2;
+    grid-row:2 / 7;
+}
+.buttons {
+    grid-column: 1;
+    grid-row: 2 / 7;
+}
+.descriptionmenu {
+    grid-column:3;
+    grid-row:2 / 7;
+}
+.fotter {
+    grid-column:1 / 4;
+    grid-row: 7;
+}
