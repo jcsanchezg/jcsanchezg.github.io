@@ -21,6 +21,8 @@
 .picturefood {
     grid-column: 2;
     grid-row:2 / 5;
+    background-image: url("/images/breastwithcheese.jpg");
+    background-size:contain ;
 }
 .buttons {
     grid-column: 1;
@@ -34,11 +36,6 @@
     color: brown;
     width: 200px;
     margin: 10px;
-}
-.picturefood {
-    background-image: url("/images/breastwithcheese.jpg");
-    /* background-repeat: no-repeat; */
-    background-size: contain;
 }
 .descriptionmenu {
     grid-column:3;
@@ -63,5 +60,56 @@
 }
 .foter {
     display:flex;
+    flex-direction: column;
     font-size: 12px;
+}
+@media screen and (max-width: 640px) {
+    .wrapper { background-color: aliceblue;}
+    .box {
+        border: 1px solid transparent;
+        border-radius:16px;
+        /* background-color: lightblue; */
+        display:flexbox;
+        font-size: 10px;
+        /* justify-content: center; */
+        /* align-items: center; */
+        margin: 3px;
+    }
+    .buttons {
+        display:flex;
+        flex-direction: column;
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        font-size:15px;
+    } 
+    .colorbuttonmenu {
+        display: flex;
+        flex-direction: column;
+        border-radius: 16px;
+        font-size: 15px;
+        color: black;
+        width: 300px;
+        margin: 10px;
+    }
+    .picturefood {
+        grid-column: 1 / 4;
+        grid-row:3;
+        background-size: 30%;
+    }
+    .descriptionmenu {
+        grid-column: 1 / 4;
+        grid-row:4;
+        align-items: center;
+    }
+    .fotter {
+        grid-column:1 / 4;
+        grid-row: 5;
+    }
+    .foter {
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: -20px;
+        background-color: beige;
+    }
+    
 }
